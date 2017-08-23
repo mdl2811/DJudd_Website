@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'omniauth_callbacks/index'
 
-    root 'home#index'
-    devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
+  root 'home#index'
+  devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
 
   resources 'testimonals'
 
