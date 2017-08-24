@@ -106,7 +106,6 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col-sm-5 more-features-box wow fadeInLeft">
-	                    <img src="assets/img/devices/iphone.png" alt="">
                       <%= image_tag "devices/iphone.png" %>
 	                </div>
 	                <div class="col-sm-7 more-features-box wow fadeInUp">
@@ -183,7 +182,7 @@
 	                    </div>
 	                </div>
 	                <div class="col-sm-5 great-support-box wow fadeInUp">
-	                    <img src="assets/img/devices/pc.png" alt="">
+                      <%= image_tag "devices/pc.png" %>
 	                </div>
 	            </div>
 	        </div>
@@ -246,7 +245,9 @@
 	                		<div class="tab-content">
 	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
 	                				<div class="testimonial-image">
-	                					<img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">
+	                					<%= image_tag "testimonials/1.jpg" %>
+                             alt="" data-at2x="assets/img/testimonials/1.jpg">
+
 	                				</div>
 	                				<div class="testimonial-text">
 		                                <p>
@@ -259,8 +260,8 @@
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
 	                				<div class="testimonial-image">
-	                					<img src="assets/img/testimonials/2.jpg" alt="" data-at2x="assets/img/testimonials/2.jpg">
-	                				</div>
+	                					<%= image_tag "testimonials/2.jpg" %> alt="" data-at2x="assets/img/testimonials/2.jpg">
+                          </div>
 	                				<div class="testimonial-text">
 		                                <p>
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
@@ -272,7 +273,7 @@
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
 	                				<div class="testimonial-image">
-	                					<img src="assets/img/testimonials/3.jpg" alt="" data-at2x="assets/img/testimonials/3.jpg">
+	                					<%= image_tag "testimonials/3.jpg" %> alt="" data-at2x="assets/img/testimonials/3.jpg">
 	                				</div>
 	                				<div class="testimonial-text">
 		                                <p>
@@ -285,7 +286,7 @@
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
 	                				<div class="testimonial-image">
-	                					<img src="assets/img/testimonials/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg">
+	                					<%= image_tag "testimonials/4.jpg" %> alt="" data-at2x="assets/img/testimonials/4.jpg">
 	                				</div>
 	                				<div class="testimonial-text">
 		                                <p>
@@ -351,7 +352,7 @@
 	            <div class="row">
 	                <div class="col-sm-4 about-us-box wow fadeInUp">
 		                <div class="about-us-photo">
-		                	<img src="assets/img/about/1.jpg" alt="" data-at2x="assets/img/about/1.jpg">
+		                	<%= image_tag "about/1.jpg" %> alt="" data-at2x="assets/img/about/1.jpg">
 		                </div>
 	                    <h3>Jim Black</h3>
 	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
@@ -363,7 +364,7 @@
 	                </div>
 	                <div class="col-sm-4 about-us-box wow fadeInDown">
 		                <div class="about-us-photo">
-		                	<img src="assets/img/about/2.jpg" alt="" data-at2x="assets/img/about/2.jpg">
+		                	<%= image_tag "about/2.jpg" %> alt="" data-at2x="assets/img/about/2.jpg">
 		                </div>
 	                    <h3>Tom Brown</h3>
 	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
@@ -375,7 +376,7 @@
 	                </div>
 	                <div class="col-sm-4 about-us-box wow fadeInUp">
 		                <div class="about-us-photo">
-		                	<img src="assets/img/about/3.jpg" alt="" data-at2x="assets/img/about/3.jpg">
+		                	<%= image_tag "about/3.jpg" %> alt="" data-at2x="assets/img/about/3.jpg">
 		                </div>
 	                    <h3>Sarah Green</h3>
 	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
@@ -408,17 +409,3 @@
                 </div>
 	        </div>
         </footer>
-
-
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/retina-1.1.0.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->

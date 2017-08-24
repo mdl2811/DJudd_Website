@@ -29,12 +29,14 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'
 gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 group :development, :test do
   gem 'pry'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'dotenv-rails'
 end
 
 group :development do
