@@ -26,10 +26,11 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'bootstrap-sass'
-gem 'omniauth-facebook'
+gem 'frontend-generators'
+
 gem 'jquery-rails'
-gem 'font-awesome-sass', '~> 4.7.0'
+
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'pry'
