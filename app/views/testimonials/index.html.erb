@@ -1,0 +1,27 @@
+<h1> <%= @user.name %> </h1>
+
+<% if @testimonial.any? %>
+      <table class="table table.hover">
+          <tr>
+              <th> User Name </th>
+          </tr>
+          <% @testimonials.each do |testimonial| %>
+          <tr>
+              <td> <%= testimonial.title %></td>
+              <td><%= link_to 'View Testimonial', testimonial_post_path(@user, testimonial), class: 'btn btn-primary' %></td>
+              <td><%= link_to 'Edit Testimonial', edit_testimonial_post_path(@user, testimonial), class: 'btn btn-warning' %></td>
+              <td><%= link_to 'Delete Testimonial',
+                    testimonial_post_path(@user, testimonial),
+                    class: 'btn btn-danger',
+                    data: { confirm: 'Really Delete?'},
+                    method: :delete %></td>
+          </tr>
+          <% end %>
+      </table>
+
+
+<% else %>
+  <h3>No Testimonials Found, Please Create One!</h3>
+<% end %>
+]
+<hr />
