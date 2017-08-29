@@ -1,17 +1,18 @@
-<h1> <%= @user.name %> </h1>
+<h1> Testimonials </h1>
 
-<% if @testimonial.any? %>
+<% if @testimonials.any? %>
       <table class="table table.hover">
           <tr>
-              <th> User Name </th>
+              <th><%= @user.name %></th>
           </tr>
           <% @testimonials.each do |testimonial| %>
           <tr>
-              <td> <%= testimonial.title %></td>
-              <td><%= link_to 'View Testimonial', testimonial_post_path(@user, testimonial), class: 'btn btn-primary' %></td>
-              <td><%= link_to 'Edit Testimonial', edit_testimonial_post_path(@user, testimonial), class: 'btn btn-warning' %></td>
+              <td><%= testimonial.title %></td>
+              <td><%= testimonial.body %></td>
+              <td><%= link_to 'View Testimonial', testimonial_path(testimonial), class: 'btn btn-primary' %></td>
+              <td><%= link_to 'Edit Testimonial', edit_testimonial_path(testimonial), class: 'btn btn-warning' %></td>
               <td><%= link_to 'Delete Testimonial',
-                    testimonial_post_path(@user, testimonial),
+                    testimonial_path(testimonial),
                     class: 'btn btn-danger',
                     data: { confirm: 'Really Delete?'},
                     method: :delete %></td>
@@ -22,6 +23,11 @@
 
 <% else %>
   <h3>No Testimonials Found, Please Create One!</h3>
+  <td><%= link_to 'Create Testimonial', new_testimonial_path, class: 'btn btn-primary' %></td>
 <% end %>
-]
+
+<% if current_user %>
+<td><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'btn btn-danger' %></td>
+<% end %>
+
 <hr />

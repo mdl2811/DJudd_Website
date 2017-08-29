@@ -1,16 +1,21 @@
-class CategoriesController < ApplicationController
-  before_action :set_category, except: [:index, :new, :create]
+class TestimonialsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+  before_action :set_testimonial, except: [:index, :new, :create]
+
   def index
-    @testimonials = Testimonials.all
+    @testimonials = Testimonial.all
+    @user = current_user
   end
 
   def new
-    @testimonials = Testimonials.new
+    @testimonial = Testimonial.new
   end
 
   def create
-    @testimonials = Testimonials.new(user_params)
-    if @testimonials.save
+    @testimonial = Testimonial.new(testimonials_params)
+    @testimonial.user_id = current_user.id
+    @testimonial.name = current_user.name
+    if @testimonial.save
       redirect_to testimonials_path
     else
       render :new
@@ -21,7 +26,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    if @testimonials.update(testimonials_params)
+    if @testimonial.update(testimonials_params)
       redirect_to testimonials_path
     else
       render :edit
@@ -29,16 +34,17 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @testimonials.destroy
+    @testimonial.destroy
     redirect_to testimonials_path
   end
 
   private
+  def set_testimonial
 
-  def set_category
-    @testimonials = Testimonials.find(params[:id])
+    @testimonial = Testimonial.find(params[:id])
   end
 
-  def category_params
-    params.require(:user).permit(:name)
+  def testimonials_params
+    params.require(:testimonial).permit(:title, :body, :rating, :location)
   end
+end

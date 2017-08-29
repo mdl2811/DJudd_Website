@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'omniauth_callbacks/index'
 
   root 'grayscales#index'
+
   devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
 
   resources 'testimonials'
