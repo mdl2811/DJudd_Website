@@ -22,9 +22,10 @@
     <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
-<div class="field">
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+  <div class="form-group">
+    <label for="comment">Body:</label>
+    <textarea class="form-control" rows="5" id="body"></textarea>
+  </div>
 </div>
 <div class="actions">
   <%= f.submit %>
