@@ -1,9 +1,9 @@
 class TestimonialsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   before_action :set_testimonial, except: [:index, :new, :create]
 
   def index
-    @testimonials = Testimonial.all
+    @testimonials = Testimonial.where(user_id: current_user.id)
     @user = current_user
   end
 

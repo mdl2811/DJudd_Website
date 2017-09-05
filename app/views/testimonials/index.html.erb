@@ -1,14 +1,15 @@
 <center>
-  <link rel="stylesheet" href="testimonials.css">
 <div>
 <h1> Testimonials </h1>
 
 <% if @testimonials.any? %>
       <table class="table table.hover">
+        <% if current_user %>
           <tr>
               <th><%= @user.name %></th>
           </tr>
-          <% @testimonials.each do |testimonial| %>
+        <% end %>
+        <% @testimonials.each do |testimonial| %>
           <tr>
             <td><%= testimonial.name %></td>
               <td><%= testimonial.title %></td>
@@ -22,12 +23,11 @@
                     data: { confirm: 'Really Delete?'},
                     method: :delete %></td>
           </tr>
-          <% end %>
+        <% end %>
       </table>
 
-
 <% else %>
-  <h3><%= link_to 'Create Testimonial', new_testimonial_path, class: 'btn-lg btn-outline-primary' %></h3>
+  <h3><%= link_to 'Create Testimonial', new_testimonial_path, class: 'btn-lg btn-default' %></h3>
 <% end %>
 
 <%= link_to "HomePage", root_path, class: 'btn btn-outline-primary'%>
