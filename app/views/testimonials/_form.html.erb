@@ -12,21 +12,37 @@
 
   <div class="field">
     <%= f.label :title %>
+  </br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :name %>
+  </br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :location %>
+  </br>
     <%= f.text_field :location %>
   </div>
 <div class="field">
   <%= f.label :body %>
+</br>
   <%= f.text_field :body %>
 </div>
+  <center>
+  <ul class="form">
+    <li class="rating">
+      <input type="radio" name="rating" value="0" checked /><span class="hide"></span>
+      <input type="radio" name="rating" value="1" /><span></span>
+      <input type="radio" name="rating" value="2" /><span></span>
+      <input type="radio" name="rating" value="3" /><span></span>
+      <input type="radio" name="rating" value="4" /><span></span>
+      <input type="radio" name="rating" value="5" /><span></span></center>
+    </li>
+  </ul>
 <div class="actions">
+</br>
   <%= f.submit %>
 </div>
 <% end %>

@@ -376,6 +376,40 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
-p.large {
-    line-height: 90%;
+.form {
+    margin:0;
+}
+
+.form li {
+    list-style:none;
+}
+
+.hide {
+    display:none;
+}
+
+.rating input[type="radio"] {
+    position:absolute;
+    filter:alpha(opacity=1);
+    -moz-opacity:1;
+    -khtml-opacity:1;
+    opacity:1;
+    cursor:pointer;
+    width:17px;
+}
+
+.rating span {
+    width:24px;
+    height:16px;
+    line-height:16px;
+    padding:1px 22px 1px 0; /* 1px FireFox fix */
+    background:url(stars.png) no-repeat -22px 0;
+}
+
+.rating input[type="radio"]:checked + span {
+    background-position:-22px 0;
+}
+
+.rating input[type="radio"]:checked + span ~ span {
+    background-position:0 0;
 }
